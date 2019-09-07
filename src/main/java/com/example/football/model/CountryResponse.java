@@ -5,14 +5,16 @@ import java.util.Set;
 
 public class CountryResponse {
 
-	private Set<CountryDetails> countries = new HashSet<>();
+	private CountryDetails[] countries;
 
-	public Set<CountryDetails> getCountries() {
+	public CountryDetails[] getCountries() {
 		return countries;
 	}
 
-	public void setCountries(Set<CountryDetails> countries) {
+	public void setCountries(CountryDetails[] countries) {
 		this.countries = countries;
 	}
+
+
 	
 }

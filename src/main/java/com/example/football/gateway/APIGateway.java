@@ -1,10 +1,12 @@
 package com.example.football.gateway;
 
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.football.model.CountryDetails;
 import com.example.football.model.CountryLeagueResponse;
-import com.example.football.model.CountryResponse;
 import com.example.football.model.StandingsSet;
 
 @Component
@@ -37,11 +39,11 @@ public class APIGateway {
 		return leagues ;
 	}
 
-	public CountryResponse getCountries() {
+	public List<CountryDetails> getCountries() {
 
 		RestTemplate restTemplate = new RestTemplate();
 
-		CountryResponse countries = restTemplate.getForObject(baseUrl+action_getCountries+url_api_key+apiKey, CountryResponse.class);
+			List<CountryDetails> countries = restTemplate.getForObject(baseUrl+action_getCountries+url_api_key+apiKey, List.class);
 
 		return countries ;
 	}

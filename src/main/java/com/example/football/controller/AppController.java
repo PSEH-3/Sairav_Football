@@ -24,8 +24,8 @@ public class AppController {
 	FootballService footballService ;
 		
 	@RequestMapping(value="/standings",method= RequestMethod.GET)
-	public StandingsResponse getStandings(@RequestParam String countryName,
-			@RequestParam String leagueName , @RequestParam String teamName) {
+	public StandingsResponse getStandings(@RequestParam("countryName") String countryName,
+			@RequestParam("leagueName") String leagueName , @RequestParam("teamName") String teamName) {
 		
 		StandingsSet standings = footballService.getStandings(countryName, leagueName, teamName);
 		StandingsResponse sr = new StandingsResponse();
