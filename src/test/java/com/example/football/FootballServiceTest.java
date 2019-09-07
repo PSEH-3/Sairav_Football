@@ -20,7 +20,7 @@ public class FootballServiceTest {
 	APIGateway apiGateway ;
 	
 	@Test
-	public void getStandings(String cname , String lname , String tname ) {
+	public void getStandings() {
 		
 		StandingsSet ss = new StandingsSet();
 		
