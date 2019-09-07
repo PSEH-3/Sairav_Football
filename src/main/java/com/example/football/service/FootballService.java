@@ -22,8 +22,7 @@ public class FootballService {
 		List<CountryDetails> countries = apiGateway.getCountries();
 		
 		System.out.println(countries);
-		
-		
+				
 		countries.forEach(country->{
 			FootballApplication.countryNameId.put(country.getCountry_name(), country.getCountry_id());
 		});

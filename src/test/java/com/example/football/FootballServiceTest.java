@@ -20,7 +20,7 @@ public class FootballServiceTest {
 	APIGateway apiGateway ;
 	
 	@Test
-	public StandingsSet getStandings(String cname , String lname , String tname ) {
+	public void getStandings(String cname , String lname , String tname ) {
 		
 		StandingsSet ss = new StandingsSet();
 		
@@ -37,7 +37,6 @@ public class FootballServiceTest {
 		ss.setStandings(set);
 		
 		assertEquals(ss, apiGateway.getStandings(3));
-		return ss ;
 	}
 	
 }
